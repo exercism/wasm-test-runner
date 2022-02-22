@@ -1,10 +1,8 @@
 module.exports = {
+  root: true,
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
-  env: {
-    jest: true,
-  },
-  extends: ['../.eslintrc.js'],
+  extends: '@exercism/eslint-config-tooling',
 }

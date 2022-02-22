@@ -1,8 +1,10 @@
-export default {
-  root: true,
+module.exports = {
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.json'],
   },
-  extends: '@exercism/eslint-config-tooling',
+  env: {
+    jest: true,
+  },
+  extends: ['../.eslintrc.cjs'],
 }
