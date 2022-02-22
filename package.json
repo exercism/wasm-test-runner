@@ -1,20 +1,21 @@
 {
-  "name": "@exercism/javascript-test-runner",
-  "description": "Automated Test runner for exercism solutions in Javascript.",
+  "name": "@exercism/wasm-test-runner",
+  "description": "Automated Test runner for exercism solutions in WebAssembly.",
   "author": "Derk-Jan Karrenbeld <derk-jan+github@karrenbeld.info>",
   "version": "3.1.1",
   "license": "AGPL-3.0-or-later",
   "repository": {
     "type": "git",
-    "url": "https://github.com/exercism/javascript-test-runner"
+    "url": "https://github.com/exercism/wasm-test-runner"
   },
+  "type": "module",
   "directories": {
     "lib": "./dist",
     "doc": "./docs",
     "test": "./test"
   },
   "bin": {
-    "javascript-test-runner": "bin/run.sh"
+    "wasm-test-runner": "bin/run.sh"
   },
   "scripts": {
     "execute": "./bin/run.sh",
@@ -25,7 +26,7 @@
     "prepare": "yarn build",
     "prepublishOnly": "yarn test:bare && yarn lint",
     "lint": "yarn eslint src --ext ts,js,tsx,jsx,mjs -c .eslintrc.js && yarn eslint test --ext ts,js,tsx,jsx,mjs -c test/.eslintrc.js",
-    "test": "yarn build && yarn test:bare",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js ./*",
     "test:bare": "jest --roots test --testPathIgnorePatterns=\"fixtures/\""
   },
   "dependencies": {
@@ -35,6 +36,7 @@
     "@babel/preset-typescript": "^7.16.7",
     "@exercism/babel-preset-javascript": "^0.1.2",
     "@exercism/static-analysis": "^0.12.0",
+    "@exercism/wasm-lib": "^0.1.0",
     "@typescript-eslint/typescript-estree": "^5.11.0",
     "@typescript-eslint/visitor-keys": "^5.11.0",
     "babel-jest": "^27.5.1",
@@ -55,6 +57,6 @@
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.1.3",
-    "typescript": "^4.5.5"
+    "typescript": "^4.7.0-dev.20220222"
   }
 }

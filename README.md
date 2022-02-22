@@ -1,8 +1,8 @@
-# Exercism JavaScript Test Runner
+# Exercism WebAssembly Test Runner
 
-[![javascript-test-runner / deploy](https://github.com/exercism/javascript-test-runner/actions/workflows/deploys.yml/badge.svg)](https://github.com/exercism/javascript-test-runner/actions/workflows/deploys.yml) [![javascript-test-runner / main](https://github.com/exercism/javascript-test-runner/actions/workflows/ci.js.yml/badge.svg)](https://github.com/exercism/javascript-test-runner/actions/workflows/ci.js.yml)
+[![wasm-test-runner / deploy](https://github.com/exercism/wasm-test-runner/actions/workflows/deploys.yml/badge.svg)](https://github.com/exercism/wasm-test-runner/actions/workflows/deploys.yml) [![wasm-test-runner / main](https://github.com/exercism/wasm-test-runner/actions/workflows/ci.js.yml/badge.svg)](https://github.com/exercism/wasm-test-runner/actions/workflows/ci.js.yml)
 
-The Docker image for automatically run tests on JavaScript solutions submitted to [exercism][web-exercism].
+The Docker image for automatically run tests on WebAssembly solutions submitted to [exercism][web-exercism].
 
 > At this moment, the input path _must_ be relative to the `package.json` of this repository.
 > `jest` doesn't like running outside of its tree.
@@ -48,7 +48,7 @@ For example:
 ```shell
 $ ./bin/run.sh two-fer ./test/fixtures/two-fer/pass
 
-Using reporter : **/dist/reporter.js
+Using reporter : **/dist/reporter.mjs
 Using test-root: **/test/fixtures/two-fer/pass/
 Using base-root: **/
 Using setup-env: **/dist/jest/setup.js
@@ -67,7 +67,7 @@ Instead of passing in an `<exercises-slug>` and `<path-to-solution-folder>`, you
 
 You can pass the following type of URLs:
 
-- Published solutions: `/tracks/javascript/exercises/<slug>/<id>`
+- Published solutions: `/tracks/wasm/exercises/<slug>/<id>`
 - Mentor solutions: `/mentor/solutions/<id>`
 - Your solutions: `/my/solutions/<id>`
 - Private solutions: `/solutions/<id>`
@@ -102,7 +102,7 @@ To run a solution's test in the Docker container, do the following:
 
 ## Maintaining
 
-The `package.json` needs to be in-sync with the [`javascript` track `package.json`][git-javascript].
+The `package.json` needs to be in-sync with the [`wasm` track `package.json`][git-wasm].
 
 ### Testing
 
@@ -112,4 +112,4 @@ The tests delegate to the _build output_, which is why `yarn test` first calls `
 
 [web-exercism]: https://exercism.io
 [git-automated-tests]: https://github.com/exercism/automated-tests
-[git-javascript]: https://github.com/exercism/javascript
+[git-wasm]: https://github.com/exercism/wasm

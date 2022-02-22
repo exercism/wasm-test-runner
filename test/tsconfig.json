@@ -3,7 +3,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "noEmit": true
+    "noEmit": true,
+    "module":"NodeNext",
   },
   "include": ["./", "../src"],
   "exclude": ["./fixtures"]

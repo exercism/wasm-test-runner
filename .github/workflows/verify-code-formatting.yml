@@ -1,4 +1,4 @@
-name: javascript-test-runner / format
+name: wasm-test-runner / format
 
 on:
   push:
