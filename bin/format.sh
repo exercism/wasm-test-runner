@@ -2,7 +2,7 @@
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "Pulling prettier version from package.json"
-  EXERCISM_PRETTIER_VERSION=$(pnpm list --pattern prettier | grep -Po '.*\sprettier@\K.*')
+  EXERCISM_PRETTIER_VERSION=$(cat pnpm-lock.yaml | grep -E '^[[:space:]]+prettier: [0-9]' | cut -d':' -f2)
 fi
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
