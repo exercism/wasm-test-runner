@@ -13,20 +13,20 @@ The Docker image for automatically run tests on WebAssembly solutions submitted 
 Clone this repository and then run:
 
 ```shell
-yarn install
+pnpm install
 ```
 
 You'll need at least Node LTS for this to work.
 
 ```shell
-yarn build
+pnpm build
 ```
 
 ## Usage
 
-If you're developing this, you can run this via `yarn` or the provided shell script.
+If you're developing this, you can run this via `pnpm` or the provided shell script.
 
-- `.sh` enabled systems (UNIX, WSL): `yarn execute:dev`
+- `.sh` enabled systems (UNIX, WSL): `pnpm execute:dev`
 - `.bat` fallback (cmd.exe, Git Bash for Windows): _unsupported_
 
 You'll want these `:dev` variants because it will _build_ the required code (it will transpile from TypeScript to JavaScript, which is necessary to run this in Node environments, unlike Deno environments).
@@ -34,7 +34,7 @@ When on Windows, if you're using Git Bash for Windows or a similar terminal, the
 The `.bat` scripts will work in the same terminal.
 In this case it might be much easier to run `bin/run.sh` directly, so a new shell won't open.
 
-You can also manually build using `yarn` or `yarn build`, and then run the script directly: `./bin/run.sh arg1 arg2 arg3`.
+You can also manually build using `pnpm` or `pnpm build`, and then run the script directly: `./bin/run.sh arg1 arg2 arg3`.
 
 ## Running the Solution's Tests
 
@@ -107,7 +107,7 @@ The `package.json` needs to be in-sync with the [`wasm` track `package.json`][gi
 ### Testing
 
 Running the tests of the test-runner itself can be achieved by using the `test` script from `package.json`.
-The tests delegate to the _build output_, which is why `yarn test` first calls `yarn build` before running `jest`.
+The tests delegate to the _build output_, which is why `pnpm test` first calls `pnpm build` before running `jest`.
 **The tests take over a minute to run on a decent machine**.
 
 [web-exercism]: https://exercism.io

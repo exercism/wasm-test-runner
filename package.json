@@ -19,14 +19,14 @@
   },
   "scripts": {
     "execute": "./bin/run.sh",
-    "execute:dev": "yarn build && yarn execute",
+    "execute:dev": "pnpm build && pnpm execute",
     "prebuild": "rimraf ./dist",
-    "build": "yarn tsc --project ./src/tsconfig.json --outDir ./dist",
-    "watch": "yarn build -w",
-    "prepare": "yarn build",
-    "prepublishOnly": "yarn test:bare && yarn lint",
-    "lint": "yarn eslint src --ext ts,js,tsx,jsx,mjs -c .eslintrc.js && yarn eslint test --ext ts,js,tsx,jsx,mjs -c test/.eslintrc.js",
-    "test": "yarn build && node --experimental-vm-modules node_modules/jest/bin/jest.js ./*",
+    "build": "pnpm tsc --project ./src/tsconfig.json --outDir ./dist",
+    "watch": "pnpm build -w",
+    "prepare": "pnpm build",
+    "prepublishOnly": "pnpm test:bare && pnpm lint",
+    "lint": "pnmn eslint src --ext ts,js,tsx,jsx,mjs -c .eslintrc.js && pnpm eslint test --ext ts,js,tsx,jsx,mjs -c test/.eslintrc.js",
+    "test": "pnpm build && node --experimental-vm-modules node_modules/jest/bin/jest.js ./*",
     "test:bare": "jest --roots test --testPathIgnorePatterns=\"fixtures/\""
   },
   "dependencies": {

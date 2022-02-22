@@ -14,6 +14,10 @@ tmp
 debug.log
 yarn-error.log
 
+# Should use PNPM!
+packa-gelokc.json
+yarn.lock
+
 # Docker base files
 /in
 /out
