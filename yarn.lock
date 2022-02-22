@@ -997,6 +997,13 @@
   resolved "https://registry.yarnpkg.com/@exercism/static-analysis/-/static-analysis-0.12.0.tgz#05cac2d3379bda318d5a014ade2ce59095aeaa38"
   integrity sha512-SMzVabTnp3YMpvZzpruZouFz5ocHSq5vHd84Gs0auYidwvHZRRen9ae7MjeYOEmUM7FCysIZtDlvSvGEsfumlA==
 
+"@exercism/wasm-lib@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@exercism/wasm-lib/-/wasm-lib-0.1.0.tgz#924c086a53262addb3cffe5c2e120d7652146bf2"
+  integrity sha512-i/b77xVWUGbuUwzojrK1VaWGBkWlL+9Oo7rSm/7xkDvGAjg7rqdNGJIMvi5od4FPMHNbku1jMPU7BOKTgea2lw==
+  dependencies:
+    wabt "^1.0.26"
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.3.tgz#f2564c744b387775b436418491f15fce6601f63e"
@@ -4318,10 +4325,10 @@ typedarray-to-buffer@^3.1.5:
   dependencies:
     is-typedarray "^1.0.0"
 
-typescript@^4.5.5:
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"
-  integrity sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==
+typescript@^4.7.0-dev.20220222:
+  version "4.7.0-dev.20220222"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.7.0-dev.20220222.tgz#3edc3cf8940ee3d5d8ae1dc7a762b80e0c1702aa"
+  integrity sha512-gm3f2mDGIHrWi8TKsgyl/FuwZWbsmXJ8FissebhjDsqjG37Wk5M1i6UN3iinUZkX3xVebZEWYR8y8sHKgaJO2Q==
 
 unbox-primitive@^1.0.1:
   version "1.0.1"
@@ -4402,6 +4409,11 @@ w3c-xmlserializer@^2.0.0:
   integrity sha512-4tzD0mF8iSiMiNs30BiLO3EpfGLZUT2MSX/G+o7ZywDzliWQ3OPtTZ0PTC3B3ca1UAf4cJMHB+2Bf56EriJuRA==
   dependencies:
     xml-name-validator "^3.0.0"
+
+wabt@^1.0.26:
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/wabt/-/wabt-1.0.27.tgz#1ceaf3249d6cd00681f3bec42fdfc86dadcb05a9"
+  integrity sha512-epKSgf60WIwTItioDQFsjixtpTXUxPOlUIXiKA7b/VYQS1OynXftATYULmtBClAbBYdXkfmCIW9JDOIbuk2NrA==
 
 walker@^1.0.7:
   version "1.0.8"
