@@ -2,7 +2,7 @@
   "extends": "@tsconfig/node16/tsconfig.json",
   "include": ["src"],
   "compilerOptions": {
-    "module":"NodeNext",
+    "module": "NodeNext"
   },
   "exclude": ["test", "node_modules"]
 }

@@ -4,7 +4,7 @@ import { join, resolve } from 'path'
 import { lstat, mkdtempSync, readFileSync, unlink } from 'fs'
 import { tmpdir } from 'os'
 
-const root = new URL("..", import.meta.url);
+const root = new URL('..', import.meta.url)
 const fixtures = resolve(__dirname, 'fixtures')
 const bin = resolve(root, 'bin')
 const run = resolve(bin, 'run.sh')
@@ -62,7 +62,6 @@ describe('javascript-test-runner', () => {
         })
       })
     })
-
   })
 
   const failures = ['tests', 'empty']

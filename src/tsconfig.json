@@ -3,7 +3,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "module":"NodeNext",
+    "module": "NodeNext"
   },
   "include": ["./"],
   "exclude": ["./fixtures"]
