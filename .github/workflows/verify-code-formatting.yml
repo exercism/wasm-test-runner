@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: 'Checkout code'
         uses: actions/checkout@v2
-
+      - name: 'Install pnpm'
+        run: curl -fsSL https://get.pnpm.io/install.sh | sh -
       - name: 'Verify formatting of all files'
         run: ./bin/check-formatting.sh
