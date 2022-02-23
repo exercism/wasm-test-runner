@@ -90,7 +90,7 @@ if test -f "$REPORTER"; then
 
   echo ""
 else
-  echo >&2 "Expected reporter.mjs to exist. Did you forget to pnpm build first?"
+  echo >&2 "Expected reporter.js to exist. Did you forget to pnpm build first?"
   echo >&2 "Using reporter : $REPORTER"
   echo >&2 "Using test-root: $INPUT"
   echo >&2 "Using base-root: $ROOT"

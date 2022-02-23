@@ -48,7 +48,7 @@ For example:
 ```shell
 $ ./bin/run.sh two-fer ./test/fixtures/two-fer/pass
 
-Using reporter : **/dist/reporter.mjs
+Using reporter : **/dist/reporter.js
 Using test-root: **/test/fixtures/two-fer/pass/
 Using base-root: **/
 Using setup-env: **/dist/jest/setup.js
