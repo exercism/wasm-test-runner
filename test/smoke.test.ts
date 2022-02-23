@@ -119,7 +119,7 @@ describe('javascript-test-runner', () => {
             }
             expect(result.status).toBe('fail')
 
-            if (cause == 'syntax') {
+            if (cause === 'syntax') {
               expect(result.tests[0].message).toBe(
                 'Error: parseWat failed:\n2:19: error: unexpected token ")", expected i32, i64, f32, f64, v128 or externref.\n    (global $thing)\n                  ^'
               )
