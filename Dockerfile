@@ -23,9 +23,7 @@ RUN npm install -g pnpm
 
 # Build the test runner
 # install all the development modules (used for building)
-RUN set -ex \
-    pnpm install \
-    pnpm build
+RUN set -ex && pnpm install && pnpm build
 
 # install only the node_modules we need for production
 RUN rm -rf node_modules && pnpm install --prod && pnpm store prune
