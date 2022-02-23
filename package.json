@@ -27,7 +27,7 @@
     "prepublishOnly": "pnpm test:bare && pnpm lint",
     "lint": "pnpm eslint src --ext ts,js,tsx,jsx,mjs -c .eslintrc.cjs && pnpm eslint test --ext ts,js,tsx,jsx,mjs -c test/.eslintrc.cjs",
     "test": "pnpm build && node --experimental-vm-modules node_modules/jest/bin/jest.js ./*",
-    "test:bare": "node --experimental-vm-modules node_modules/jest/bin/jest.js -- --roots test --testPathIgnorePatterns=\"fixtures/\""
+    "test:bare": "node --experimental-vm-modules node_modules/jest/bin/jest.js --roots test --testPathIgnorePatterns=\"fixtures/\""
   },
   "dependencies": {
     "@babel/core": "^7.17.2",

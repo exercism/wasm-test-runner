@@ -5,9 +5,8 @@ import { lstat, mkdtempSync, readFileSync, unlink } from 'node:fs'
 import { tmpdir } from 'node:os'
 
 const root = new URL('..', import.meta.url).pathname
-const fixtures = resolve(root, 'fixtures')
-const bin = resolve(root, 'bin')
-const run = resolve(bin, 'run.sh')
+const fixtures = new URL('./fixtures', import.meta.url).pathname
+const run = new URL('../bin/run.sh', import.meta.url).pathname
 
 describe('javascript-test-runner', () => {
   jest.setTimeout(120 * 1000)
@@ -32,7 +31,8 @@ describe('javascript-test-runner', () => {
       )
 
       if (spawned.stderr?.length) {
-        console.warn('Did not expect anything logged to stderr.')
+        // Commented out because Node always triggers an ExperimentalWarning
+        // console.warn('Did not expect anything logged to stderr.')
         console.warn(spawned.stderr.toString())
       }
 
@@ -64,7 +64,7 @@ describe('javascript-test-runner', () => {
     })
   })
 
-  const failures = ['tests', 'empty']
+  const failures = ['tests', 'syntax', 'empty']
   failures.forEach((cause) => {
     describe(`failing solution (${cause})`, () => {
       const resultPath = join(
@@ -150,7 +150,7 @@ describe('javascript-test-runner', () => {
     })
   })
 
-  const errors = ['missing', 'syntax', 'malformed_tests']
+  const errors = ['missing', 'malformed_tests']
   errors.forEach((cause) => {
     describe(`error solution (${cause})`, () => {
       const resultPath = join(
