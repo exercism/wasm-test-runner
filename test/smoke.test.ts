@@ -4,9 +4,9 @@ import { join, resolve } from 'node:path'
 import { lstat, mkdtempSync, readFileSync, unlink } from 'node:fs'
 import { tmpdir } from 'node:os'
 
-const root = new URL('..', import.meta.url)
-const fixtures = resolve(root.toString(), 'fixtures')
-const bin = resolve(root.toString(), 'bin')
+const root = new URL('..', import.meta.url).pathname
+const fixtures = resolve(root, 'fixtures')
+const bin = resolve(root, 'bin')
 const run = resolve(bin, 'run.sh')
 
 describe('javascript-test-runner', () => {
