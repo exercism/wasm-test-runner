@@ -1,12 +1,12 @@
-import { describe, afterEach, test, expect } from '@jest/globals'
-import { spawnSync } from 'child_process'
-import { join, resolve } from 'path'
-import { lstat, mkdtempSync, readFileSync, unlink } from 'fs'
-import { tmpdir } from 'os'
+import { jest, describe, afterEach, test, expect } from '@jest/globals'
+import { spawnSync } from 'node:child_process'
+import { join, resolve } from 'node:path'
+import { lstat, mkdtempSync, readFileSync, unlink } from 'node:fs'
+import { tmpdir } from 'node:os'
 
 const root = new URL('..', import.meta.url)
-const fixtures = resolve(__dirname, 'fixtures')
-const bin = resolve(root, 'bin')
+const fixtures = resolve(root.toString(), 'fixtures')
+const bin = resolve(root.toString(), 'bin')
 const run = resolve(bin, 'run.sh')
 
 describe('javascript-test-runner', () => {

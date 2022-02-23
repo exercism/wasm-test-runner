@@ -3,7 +3,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "module": "NodeNext"
+    "module": "ES2020",
+    "moduleResolution": "node"
   },
   "include": ["./"],
   "exclude": ["./fixtures"]
