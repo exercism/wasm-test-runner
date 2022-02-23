@@ -15,7 +15,7 @@ debug.log
 yarn-error.log
 
 # Should use PNPM!
-packa-gelokc.json
+package-lock.json
 yarn.lock
 
 # Docker base files
