@@ -5,10 +5,10 @@ FROM node:16-bullseye-slim as runner
 # fetch latest security updates
 # curl is required to fetch our webhook from github
 # unzip is required for unzipping payloads in development
-RUN set -ex \
-    apt-get update \
-    apt-get upgrade -y \
-    apt-get install curl unzip jq -y \
+RUN set -ex && \
+    apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install curl unzip jq -y && \
     rm -rf /var/lib/apt/lists/*
 
 # add a non-root user to run our code as
