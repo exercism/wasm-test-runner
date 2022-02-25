@@ -16,14 +16,17 @@ RUN adduser --disabled-password --gecos "" appuser
 
 # install our test runner to /opt
 WORKDIR /opt/test-runner
-COPY . .
 
 # Install pnpm
 RUN npm install -g pnpm
 
-# Build the test runner
 # install all the development modules (used for building)
-RUN set -ex && pnpm install && pnpm build
+COPY package.json pnpm-lock.yaml .
+RUN pnpm install
+
+# Build the test runner
+COPY . .
+RUN pnpm build
 
 # install only the node_modules we need for production
 RUN rm -rf node_modules && pnpm install --prod && pnpm store prune
