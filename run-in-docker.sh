@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 # Synopsis:
 # Test runner for run.sh in a docker container
