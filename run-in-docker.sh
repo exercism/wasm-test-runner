@@ -9,8 +9,8 @@ set -e
 
 # Arguments:
 # $1: exercise slug
-# $2: **RELATIVE** path to solution folder (without trailing slash)
-# $3: **RELATIVE** path to output directory (without trailing slash)
+# $2: path to solution folder (without trailing slash)
+# $3: path to output directory (without trailing slash)
 
 # Output:
 # Writes the tests output to the output directory
@@ -24,6 +24,9 @@ if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]; then
     exit 1
 fi
 
+solution_dir=$(realpath $2)
+output_dir=$(realpath $3)
+
 # build docker image
 docker build -t wasm-test-runner .
 
@@ -31,7 +34,7 @@ docker build -t wasm-test-runner .
 docker run \
     --network none \
     --read-only \
-    --mount type=bind,src=$PWD/$2,dst=/solution/ \
-    --mount type=bind,src=$PWD/$3,dst=/output/ \
+    --mount type=bind,src=${solution_dir},dst=/solution/ \
+    --mount type=bind,src=${output_dir},dst=/output/ \
     --mount type=tmpfs,dst=/tmp \
     wasm-test-runner $1 /solution/ /output/
