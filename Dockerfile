@@ -24,11 +24,14 @@ COPY package.json pnpm-lock.yaml .
 RUN pnpm install
 
 # Build the test runner
-COPY . .
+COPY src/ src/
+COPY babel.config.cjs tsconfig.json .
 RUN pnpm build
 
 # install only the node_modules we need for production
 RUN rm -rf node_modules && pnpm install --prod && pnpm store prune
+
+COPY . .
 
 USER appuser
 ENTRYPOINT [ "/opt/test-runner/bin/run.sh" ]
