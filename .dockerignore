@@ -1,5 +1,6 @@
 dist
 node_modules
+test/
 .git
 ./run-in-docker.sh
 Dockerfile
@@ -9,3 +10,5 @@ dev.Dockerfile
 .gitignore
 .gitattributes
 .dockerignore
+*.md
+*.jstmp
