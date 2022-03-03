@@ -3,12 +3,11 @@ FROM node:16-bullseye-slim as runner
 # Debian bullseye
 
 # fetch latest security updates
-# curl is required to fetch our webhook from github
-# unzip is required for unzipping payloads in development
+# jq is needed to read JSON configuration files
 RUN set -ex && \
     apt-get update && \
     apt-get upgrade -y && \
-    apt-get install curl unzip jq -y && \
+    apt-get install jq -y && \
     rm -rf /var/lib/apt/lists/*
 
 # add a non-root user to run our code as
