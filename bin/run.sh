@@ -136,8 +136,10 @@ result_file="${OUTPUT}results.json"
 # Disable auto exit
 set +e
 
-# Run tests
+# Jest needs the node_modules directory somewhere in the project's tree path
+ln -s /opt/test-runner/node_modules "${OUTPUT}/node_modules"
 
+# Run tests
 "node" "--experimental-vm-modules" "$ROOT/node_modules/jest/bin/jest.js" "${OUTPUT}*" \
   --bail 1 \
   --ci \
