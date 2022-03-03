@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Synopsis:
 # Automatically tests exercism's JS track solutions against corresponding test files.
@@ -16,7 +16,7 @@
 # ./run.sh two-fer path/to/two-fer/solution/folder/
 # ./run.sh two-fer path/to/two-fer/solution/folder/ path/to/output-directory/
 
-if [[ $1 != 'http?(s)://*' ]]; then
+if [[ $1 != http?(s)://* ]]; then
   if [ -z "$2" ]; then
     echo "Requires at least 2 arguments:"
     echo "1: exercise slug"
