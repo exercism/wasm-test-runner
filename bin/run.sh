@@ -16,7 +16,7 @@
 # ./run.sh two-fer path/to/two-fer/solution/folder/
 # ./run.sh two-fer path/to/two-fer/solution/folder/ path/to/output-directory/
 
-if [[ $1 != http?(s)://* ]]; then
+if [[ $1 != 'http?(s)://*' ]]; then
   if [ -z "$2" ]; then
     echo "Requires at least 2 arguments:"
     echo "1: exercise slug"
@@ -113,7 +113,7 @@ if [[ "${INPUT}" -ef "${OUTPUT}" ]]; then
   echo "${INPUT} matches ${OUTPUT}. Not copying anything."
 else
   echo "Copying ${INPUT} to ${OUTPUT}."
-  cp -r "${INPUT}" "${OUTPUT}"
+  cp -r ${INPUT}* "${OUTPUT}"
 fi
 
 if test -f $configuration_file; then
