@@ -40,7 +40,7 @@
     "@jest/console": "^27.5.1",
     "@jest/globals": "^27.5.1",
     "@jest/reporters": "^27.5.1",
-    "@jest/test-result": "^27.5.1",
+    "@jest/test-result": "^28.0.1",
     "@typescript-eslint/typescript-estree": "^5.11.0",
     "@typescript-eslint/visitor-keys": "^5.11.0",
     "babel-jest": "^27.5.1",
