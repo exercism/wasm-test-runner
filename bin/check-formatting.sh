@@ -2,7 +2,11 @@
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
   echo "Getting prettier version from pnpm"
-  EXERCISM_PRETTIER_VERSION=$(pnpm list --long | grep ^prettier | cut -c 10-)
+  EXERCISM_PRETTIER_VERSION=$(
+    grep '^\s*prettier' --after-context=2 pnpm-lock.yaml \
+      | grep version \
+      | awk -F ': ' '{print $2}'
+  )
 fi
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
