@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
-  echo "Pulling prettier version from package.json"
-  EXERCISM_PRETTIER_VERSION=$(cat pnpm-lock.yaml | grep -E '^[[:space:]]+prettier: [0-9]' | cut -d':' -f2)
+  echo "Getting prettier version from pnpm"
+  EXERCISM_PRETTIER_VERSION=$(pnpm list --long | grep ^prettier | cut -c 10-)
 fi
 
 if [ -z "$EXERCISM_PRETTIER_VERSION" ]; then
