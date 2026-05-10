@@ -32,6 +32,7 @@ docker build -t exercism/wasm-test-runner .
 
 # run image passing the arguments
 docker run \
+    --rm \
     --network none \
     --read-only \
     --mount type=bind,src=${solution_dir},dst=/solution/ \

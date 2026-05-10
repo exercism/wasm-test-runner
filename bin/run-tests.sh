@@ -37,6 +37,13 @@ for test_file in $(find "${tmp_fixtures_dir}" -name '*.spec.js'); do
     bin/run.sh "${slug}" "${test_dir_path}" "${test_dir_path}"
 
     echo "${slug}/${test_dir_name}: comparing results.json to expected_results.json"
+
+    # Fix trailing newlines
+    for file in "${results_file_path}" "${expected_results_file_path}"; do
+        contents=$( < "${file}" )
+        printf '%s\n' "${contents}" > "${file}"
+    done
+
     diff "${results_file_path}" "${expected_results_file_path}"
 
     if [ $? -ne 0 ]; then
