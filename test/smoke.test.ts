@@ -1,6 +1,6 @@
 import { jest, describe, afterEach, test, expect } from '@jest/globals'
 import { spawnSync } from 'node:child_process'
-import { join, resolve } from 'node:path'
+import { join } from 'node:path'
 import { lstat, mkdtempSync, readFileSync, unlink } from 'node:fs'
 import { tmpdir } from 'node:os'
 
@@ -114,14 +114,15 @@ describe('javascript-test-runner', () => {
               tests: [
                 {
                   message: string
-                }
+                },
               ]
             }
             expect(result.status).toBe('fail')
 
             if (cause === 'syntax') {
+              // eslint-disable-next-line jest/no-conditional-expect
               expect(result.tests[0].message).toBe(
-                'Error: parseWat failed:\n2:19: error: unexpected token ")", expected i32, i64, f32, f64, v128 or externref.\n    (global $thing)\n                  ^'
+                'Error: parseWat failed:\n2:19: error: unexpected token ")", expected i32, i64, f32, f64, v128, externref, exnref or funcref.\n    (global $thing)\n                  ^'
               )
             }
 

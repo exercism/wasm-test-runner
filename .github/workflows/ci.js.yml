@@ -9,14 +9,14 @@ on:
 
 jobs:
   precheck:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
-      - name: Use Node.js LTS (16.x)
+      - name: Use Node.js 26
         uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: 26.x
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -27,11 +27,11 @@ jobs:
         run: bin/lint.sh
 
   ci:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
 
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [26.x]
 
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332

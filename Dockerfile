@@ -1,6 +1,4 @@
-FROM node:16-bullseye-slim as runner
-# Node.js 16 (curently LTS)
-# Debian bullseye
+FROM node:26.1.0-bookworm-slim@sha256:d2ec0a1766c01dad04a185c2d5558b0adace167a7f1758ce80f0017698431d06
 
 # fetch latest security updates
 # jq is needed to read JSON configuration files
