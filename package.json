@@ -30,7 +30,7 @@
     "test:bare": "node --experimental-vm-modules node_modules/jest/bin/jest.js --roots test --testPathIgnorePatterns=\"fixtures/\""
   },
   "dependencies": {
-    "@babel/core": "^7.29.0",
+    "@babel/core": "^7.29.7",
     "@babel/node": "^7.29.7",
     "@babel/preset-env": "^7.29.7",
     "@babel/preset-typescript": "^7.29.7",
