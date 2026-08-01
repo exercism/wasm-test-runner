@@ -52,7 +52,7 @@
     "@exercism/eslint-config-tooling": "^0.10.0",
     "@tsconfig/node16": "^16.1.8",
     "@types/jest": "^30.0.0",
-    "@types/node": "^26.0.1",
+    "@types/node": "^26.1.2",
     "@typescript-eslint/eslint-plugin": "^8.60.0",
     "@typescript-eslint/parser": "^8.60.0",
     "eslint": "^10.3.0",
