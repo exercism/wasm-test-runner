@@ -25,7 +25,7 @@ importers:
         version: 0.7.0
       '@exercism/static-analysis':
         specifier: ^0.14.0
-        version: 0.14.0(@typescript-eslint/typescript-estree@8.62.1(typescript@6.0.3))(@typescript-eslint/visitor-keys@8.59.2)
+        version: 0.14.0(@typescript-eslint/typescript-estree@8.62.1(typescript@6.0.3))(@typescript-eslint/visitor-keys@8.65.0)
       '@exercism/wasm-lib':
         specifier: ^0.2.0
         version: 0.2.0
@@ -45,8 +45,8 @@ importers:
         specifier: ^8.62.1
         version: 8.62.1(typescript@6.0.3)
       '@typescript-eslint/visitor-keys':
-        specifier: ^8.59.2
-        version: 8.59.2
+        specifier: ^8.65.0
+        version: 8.65.0
       babel-jest:
         specifier: ^30.4.1
         version: 30.4.1(@babel/core@7.29.7)
@@ -3899,10 +3899,10 @@ snapshots:
       - jest
       - supports-color
 
-  '@exercism/static-analysis@0.14.0(@typescript-eslint/typescript-estree@8.62.1(typescript@6.0.3))(@typescript-eslint/visitor-keys@8.59.2)':
+  '@exercism/static-analysis@0.14.0(@typescript-eslint/typescript-estree@8.62.1(typescript@6.0.3))(@typescript-eslint/visitor-keys@8.65.0)':
     dependencies:
       '@typescript-eslint/typescript-estree': 8.62.1(typescript@6.0.3)
-      '@typescript-eslint/visitor-keys': 8.59.2
+      '@typescript-eslint/visitor-keys': 8.65.0
 
   '@exercism/wasm-lib@0.2.0':
     dependencies:
@@ -4304,7 +4304,7 @@ snapshots:
   '@typescript-eslint/project-service@8.62.1(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.62.1(typescript@6.0.3)
-      '@typescript-eslint/types': 8.62.1
+      '@typescript-eslint/types': 8.65.0
       debug: 4.4.3
       typescript: 6.0.3
     transitivePeerDependencies:
