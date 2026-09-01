@@ -37,7 +37,7 @@
     "@exercism/babel-preset-javascript": "^0.7.0",
     "@exercism/static-analysis": "^0.14.0",
     "@exercism/wasm-lib": "^0.2.0",
-    "@jest/console": "^30.4.1",
+    "@jest/console": "^30.5.0",
     "@jest/globals": "^30.5.0",
     "@jest/reporters": "^30.4.1",
     "@jest/test-result": "^30.4.1",
