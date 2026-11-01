@@ -1,4 +1,4 @@
-FROM node:26.1.0-bookworm-slim@sha256:d2ec0a1766c01dad04a185c2d5558b0adace167a7f1758ce80f0017698431d06
+FROM node:26.13.0-bookworm-slim@sha256:bc0a2afd3b74ce12222fc8bab99271e66257f021078f5f4a5d687a77d280c1d9
 
 # fetch latest security updates
 # jq is needed to read JSON configuration files
